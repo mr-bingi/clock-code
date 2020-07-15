@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0; padding:0;
+}
+#clock{
+	position: relative;
+	width: 600px;
+	height: 600px;
+	margin: 20px auto 0 auto;
+	background: url(../assets/clockface.jpg);
+	list-style: none;
+	
+}
+#sec, #min, #hour {
+position: absolute;
+width: 30px;
+height: 600px;
+top: 0px;
+left: 285px;
+
+}
+
+
+#sec {
+background: url(../assets/sechand.png);
+z-index: 3;
+}
+
+#min {
+background:url(../assets/minhand.png);
+z-index: 2;
+
+}
+
+
+#hour {
+background:url(../assets/hourhand.png);
+z-index: 1;
+}
+
+#footer{
+	position:fixed;
+	right:0;
+	bottom:0;
+	font-size:13px;
+	padding:5px 10px;
+
+}
+#footer a{
+	color:#b30000;
+	font-weight:bold;
+}

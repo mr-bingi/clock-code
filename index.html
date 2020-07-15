@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Wall Clock - Venu Nani</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="jquery.js"></script>
+
+<script>
+
+    
+  $(document).on("ready",function(){
+	  
+	
+	setInterval(function(){
+		var hours=new Date().getHours();
+		var minutes=new Date().getMinutes();
+		var hdegrees=hours*30+(minutes/2);
+		var hrotate="rotate("+hdegrees+"deg)";
+		$("#hour").css({"-webkit-transform":hrotate , "-moz-transfrom":hrotate});
+
+		var seconds=new Date().getSeconds();
+		var sdegrees=seconds*6;
+		var srotate="rotate("+sdegrees+"deg)";
+		$("#sec").css({"-webkit-transform":srotate,"-moz-transform":srotate});
+
+		var mdegrees=minutes*6;
+		var mrotate="rotate("+mdegrees+"deg)";
+		$("#min").css({"-webkit-transform":mrotate,"-moz-transform":mrotate});		
+					
+	},1000);
+	
+
+	  
+	     
+    
+
+  });
+</script>
+
+</head>
+
+<body>
+<audio autoplay>
+<source src="assets/tik-tik.mp3" type="audio/mpeg">
+</audio>
+<ul id="clock">	
+	   	<li id="sec" style="-webkit-transform: rotate(0deg);"></li>
+	   	<li id="hour" style="-webkit-transform: rotate(0deg);"></li>
+		<li id="min" style="-webkit-transform: rotate(0deg);"></li>
+	</ul>
+
+<p id="footer">Created By <a>Mr.Bingi</a></p>
+</body>
+</html>
